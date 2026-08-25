@@ -1,0 +1,14 @@
+{
+  "name": "CUT 31 — Programme 31 jours",
+  "short_name": "CUT 31",
+  "description": "Suivi quotidien du programme de perte de poids sur 31 jours.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#10110f",
+  "theme_color": "#10110f",
+  "orientation": "portrait-primary",
+  "icons": [
+    {"src":"./icons/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}
