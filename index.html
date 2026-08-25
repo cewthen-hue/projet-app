@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#10110f" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="CUT 31" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="description" content="Programme personnel de cut sur 31 jours : repas, entraînement, hydratation et progression." />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" type="image/svg+xml" href="./icons/icon.svg" />
+  <link rel="stylesheet" href="./styles.css" />
+  <title>CUT 31</title>
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <header class="topbar">
+      <div>
+        <div class="brand">CUT <span>31</span></div>
+        <div id="topbarSubtitle" class="topbar-subtitle">25 AOÛT → 24 SEPTEMBRE</div>
+      </div>
+      <button id="jumpTodayBtn" class="icon-button" aria-label="Revenir à aujourd’hui" title="Aujourd’hui">◎</button>
+    </header>
+
+    <main id="main" class="main-content" aria-live="polite"></main>
+
+    <nav class="bottom-nav" aria-label="Navigation principale">
+      <button class="nav-item active" data-view="today" aria-label="Aujourd’hui"><span class="nav-icon">◉</span><span>Aujourd’hui</span></button>
+      <button class="nav-item" data-view="program" aria-label="Programme"><span class="nav-icon">▦</span><span>Programme</span></button>
+      <button class="nav-item" data-view="progress" aria-label="Progression"><span class="nav-icon">↗</span><span>Progression</span></button>
+      <button class="nav-item" data-view="settings" aria-label="Réglages"><span class="nav-icon">⚙</span><span>Réglages</span></button>
+    </nav>
+  </div>
+
+  <div id="toast" class="toast" role="status"></div>
+  <input id="importInput" type="file" accept="application/json" hidden />
+
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
