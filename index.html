@@ -2,35 +2,58 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#10110f" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#0d0f0c" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="CUT 31" />
   <meta name="format-detection" content="telephone=no" />
-  <meta name="description" content="Programme personnel de cut sur 31 jours : repas, entraînement, hydratation et progression." />
+  <meta name="description" content="CUT 31 — programme quotidien, entraînement, hydratation, progression et Tabata." />
   <link rel="manifest" href="./manifest.webmanifest" />
   <link rel="icon" type="image/svg+xml" href="./icons/icon.svg" />
+  <link rel="apple-touch-icon" href="./icons/icon.svg" />
   <link rel="stylesheet" href="./styles.css" />
   <title>CUT 31</title>
 </head>
 <body>
+  <div class="portrait-gate" aria-hidden="true">
+    <div class="portrait-device">↻</div>
+    <strong>Tourne ton iPhone</strong>
+    <span>CUT 31 est conçu uniquement en vertical.</span>
+  </div>
+
   <div id="app" class="app-shell">
     <header class="topbar">
-      <div>
-        <div class="brand">CUT <span>31</span></div>
-        <div id="topbarSubtitle" class="topbar-subtitle">25 AOÛT → 24 SEPTEMBRE</div>
+      <div class="brand-lockup">
+        <img src="./icons/icon.svg" class="brand-icon" alt="" />
+        <div>
+          <div class="brand-wordmark">CUT <span>31</span></div>
+          <div id="topbarSubtitle" class="topbar-subtitle">25 AOÛT → 24 SEPTEMBRE</div>
+        </div>
       </div>
-      <button id="jumpTodayBtn" class="icon-button" aria-label="Revenir à aujourd’hui" title="Aujourd’hui">◎</button>
+      <button id="jumpTodayBtn" class="round-button" aria-label="Revenir à aujourd’hui" title="Aujourd’hui">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5"/></svg>
+      </button>
     </header>
 
     <main id="main" class="main-content" aria-live="polite"></main>
 
     <nav class="bottom-nav" aria-label="Navigation principale">
-      <button class="nav-item active" data-view="today" aria-label="Aujourd’hui"><span class="nav-icon">◉</span><span>Aujourd’hui</span></button>
-      <button class="nav-item" data-view="program" aria-label="Programme"><span class="nav-icon">▦</span><span>Programme</span></button>
-      <button class="nav-item" data-view="progress" aria-label="Progression"><span class="nav-icon">↗</span><span>Progression</span></button>
-      <button class="nav-item" data-view="settings" aria-label="Réglages"><span class="nav-icon">⚙</span><span>Réglages</span></button>
+      <button class="nav-item active" data-view="today" aria-label="Aujourd’hui">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="m8.7 12.1 2.1 2.1 4.5-4.7"/></svg><span>Aujourd’hui</span>
+      </button>
+      <button class="nav-item" data-view="program" aria-label="Programme">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5.5" width="16" height="14" rx="3"/><path d="M8 3.5v4M16 3.5v4M4 10h16"/></svg><span>Programme</span>
+      </button>
+      <button class="nav-item" data-view="tabata" aria-label="Tabata">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="7.5"/><path d="M12 13V8.5M9 3h6M17.5 6.5l1.5-1.5"/></svg><span>Tabata</span>
+      </button>
+      <button class="nav-item" data-view="progress" aria-label="Progression">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 9 13l3 3 7-9"/><path d="M15 7h4v4"/></svg><span>Progression</span>
+      </button>
+      <button class="nav-item" data-view="settings" aria-label="Réglages">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M5 17h14M8 4v6M16 14v6"/></svg><span>Réglages</span>
+      </button>
     </nav>
   </div>
 
