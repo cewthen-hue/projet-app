@@ -1,14 +1,18 @@
 {
   "name": "CUT 31 — Programme 31 jours",
   "short_name": "CUT 31",
-  "description": "Suivi quotidien du programme de perte de poids sur 31 jours.",
+  "description": "Programme quotidien, entraînement, hydratation, progression et timer Tabata.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#10110f",
-  "theme_color": "#10110f",
+  "background_color": "#0d0f0c",
+  "theme_color": "#0d0f0c",
   "orientation": "portrait-primary",
   "icons": [
     {"src":"./icons/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ],
+  "shortcuts": [
+    {"name":"Aujourd’hui","short_name":"Aujourd’hui","url":"./?view=today"},
+    {"name":"Tabata","short_name":"Tabata","url":"./?view=tabata"}
   ]
 }
